@@ -1,22 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Not a component, but a function that returns a string.
-// Component should be a function that returns a JSX Element (React element under the hood).
-
-// const BadComponent = () => {
-//     return 'Hello World';
-// }
-
-// A valid component using JSX.
+// A valid Component using React Top Level API
 
 const Component = () => {
-    return (
-        <main>
-            <h1 id="title">Who is the king of Ktatala?</h1>
-        </main>
+    return React.createElement(
+        'main',
+        {},
+        React.createElement('h1', { id: 'title' }, 'Who is the king of Ktatala?'),
     );
 };
-
 
 ReactDOM.render(<Component/>,document.getElementById('root'));
